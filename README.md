@@ -1,4 +1,4 @@
-# SMTrackr
+# SMTracker
 This is a dashboard project that tracks stock markets and currency exchange rates with a currency conversion feature.
 
 Description:
