@@ -1,0 +1,235 @@
+
+    <form class="form-horizontal" [formGroup]="stockForm" novalidate>
+        <!-- begin row -->
+        <div class="row" *ngIf="isShowHeader">
+            <div class="col-md-12 m-b-30">
+                <!-- begin page title -->
+                <div class="d-block d-sm-flex flex-nowrap align-items-center">
+                    <div class="page-title mb-2 mb-sm-0">
+                        <h1>Stocks Tracker Dashboard</h1>
+                    </div>
+                </div>
+                <!-- end page title -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-xxl-8 mb-30">
+                <div class="card card-statistics h-100 mb-0 o-hidden">
+                    <div class="card-header d-flex justify-content-between">
+                        <div class="card-heading">
+                            <h4 class="card-title">Stock Overview - Select Stock to Track</h4>
+                        </div>
+                        <div class="dropdown">
+                            <select class="custom-select custom-select-sm form-control" id="stockSymbol" formControlName="stockSymbol" (change)="onChangeStockSymbol()">
+                                <option value="AAPL" selected>Apple Inc.</option>
+                                <option value="MSFT">Microsoft Corporation</option>
+                                <option value="AMZN">Amazon.com Inc.</option>
+                                <option value="GOOGL">Alphabet Inc. (Google)</option>
+                                <option value="FB">Facebook, Inc.</option>
+                                <option value="TSLA">Tesla, Inc.</option>
+                                <option value="BRK.A">Berkshire Hathaway Inc.</option>
+                                <option value="JNJ">Johnson & Johnson</option>
+                                <option value="JPM">JPMorgan Chase & Co.</option>
+                                <option value="V">Visa Inc.</option>
+                                <option value="WMT">Walmart Inc.</option>
+                                <option value="PG">Procter & Gamble Company</option>
+                                <option value="UNH">UnitedHealth Group Incorporated</option>
+                                <option value="MA">Mastercard Incorporated</option>
+                                <option value="VZ">Verizon Communications Inc.</option>
+                                <option value="INTC">Intel Corporation</option>
+                                <option value="ADBE">Adobe Inc.</option>
+                                <option value="PYPL">PayPal Holdings, Inc.</option>
+                                <option value="BAC">Bank of America Corporation</option>
+                                <option value="CSCO">Cisco Systems, Inc.</option>
+                                <option value="NFLX">Netflix, Inc.</option>
+                                <option value="CRM">Salesforce.com, Inc.</option>
+                                <option value="KO">Coca-Cola Company</option>
+                                <option value="PFE">Pfizer Inc.</option>
+                                <option value="T">AT&T Inc.</option>
+                                <option value="NVDA">NVIDIA Corporation</option>
+                                <option value="HD">Home Depot, Inc.</option>
+                                <option value="PG">Procter & Gamble Company</option>
+                                <option value="UNH">UnitedHealth Group Incorporated</option>
+                                <option value="MA">Mastercard Incorporated</option>
+                                <option value="VZ">Verizon Communications Inc.</option>
+                                <option value="INTC">Intel Corporation</option>
+                                <option value="PEP">PepsiCo, Inc.</option>
+                                <option value="DIS">Walt Disney Company (The)</option>
+                                <option value="ABT">Abbott Laboratories</option>
+                                <option value="MRK">Merck & Co., Inc.</option>
+                                <option value="ABBV">AbbVie Inc.</option>
+                                <option value="AVGO">Broadcom Inc.</option>
+                                <option value="MDT">Medtronic plc</option>
+                                <option value="MCD">McDonald\'s Corporation</option>
+                                <option value="CAT">Caterpillar Inc.</option>
+                                <option value="MMM">3M Company</option>
+                                <option value="SBUX">Starbucks Corporation</option>
+                                <option value="HON">Honeywell International Inc.</option>
+                                <option value="COST">Costco Wholesale Corporation</option>
+                                <option value="AMGN">Amgen Inc.</option>
+                                <option value="CME">CME Group Inc.</option>
+                                <option value="IBM">IBM</option>
+                                <option value="ACN">Accenture plc</option>
+                                <option value="TXN">Texas Instruments Incorporated</option>
+                                <option value="TMO">Thermo Fisher Scientific Inc.</option>
+                                <option value="NKE">Nike, Inc.</option>
+                                <option value="GS">Goldman Sachs Group, Inc. (The)</option>
+                                <option value="AXP">American Express Company</option>
+                                <option value="NEE">NextEra Energy, Inc.</option>
+                                <option value="CMCSA">Comcast Corporation</option>
+                                <option value="QCOM">QUALCOMM Incorporated</option>
+                                <option value="CHTR">Charter Communications, Inc.</option>
+                                <option value="DHR">Danaher Corporation</option>
+                                <option value="UNP">Union Pacific Corporation</option>
+                                <option value="BIIB">Biogen Inc.</option>
+                                <option value="CL">Colgate-Palmolive Company</option>
+                                <option value="SPGI">S&P Global Inc.</option>
+                                <option value="LMT">Lockheed Martin Corporation</option>
+                                <option value="TMUS">T-Mobile US, Inc.</option>
+                                <option value="LOW">Lowe's Companies, Inc.</option>
+                                <option value="APH">Amphenol Corporation</option>
+                                <option value="GE">General Electric Company</option>
+                                <option value="GILD">Gilead Sciences, Inc.</option>
+                                <option value="BKNG">Booking Holdings Inc.</option>
+                                <option value="RTX">Raytheon Technologies Corporation</option>
+                                <option value="ADP">Automatic Data Processing, Inc.</option>
+                                <option value="BMY">Bristol-Myers Squibb Company</option>
+                                <option value="GM">General Motors Company</option>
+                                <option value="LLY">Eli Lilly and Company</option>
+                                <option value="DD">DuPont de Nemours, Inc.</option>
+                                <option value="TGT">Target Corporation</option>
+                                <option value="ANTM">Anthem, Inc.</option>
+                                <option value="AIG">American International Group, Inc.</option>
+                                <option value="UTX">United Technologies Corporation</option>
+                                <option value="F">Ford Motor Company</option>
+                                <option value="DE">Deere & Company</option>
+                                <option value="DOW">Dow Inc.</option>
+                                <option value="COP">ConocoPhillips</option>
+                                <option value="CI">Cigna Corporation</option>
+                                <option value="SYY">Sysco Corporation</option>
+                                <option value="MDLZ">Mondelez International, Inc.</option>
+                                <option value="MAR">Marriott International, Inc.</option>
+                                <option value="UPS">United Parcel Service, Inc.</option>
+                                <option value="DUK">Duke Energy Corporation</option>
+                                <option value="ABT">Abbott Laboratories</option>
+                                <option value="BHP">BHP Group</option>
+                                <!-- Add other stock options here -->
+                            </select>
+                            &nbsp;
+                            <select class="custom-select custom-select-sm form-control" id="timeDetail" formControlName="timeDetail" (change)="onChangeTimeDetail()">     
+                                <option value="TIME_SERIES_DAILY" selected>Weekly Chart</option>
+                                <option value="TIME_SERIES_WEEKLY_ADJUSTED">Monthly Chart</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-statistics">
+                    <div class="card-header">
+                        <div class="card-heading">
+                            <h4 class="card-title">Stock Chart</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-container col-12" id="stockChart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card card-statistics">
+                    <div class="card-header d-flex justify-content-between">
+                        <div class="card-heading">
+                            <h4 class="card-title">Top Gainers</h4>
+                        </div>
+                        <div class="dropdown">
+                            <select class="custom-select custom-select-sm" id="selectGainersLosers" formControlName="selectGainersLosers" (change)="onChangeGainerSelect()">
+                                
+                                <option value="Choose Number" >Choose Number</option>
+                                <option value="2">2</option>
+                                <option value="4" selected>4</option>
+                                <option value="8">8</option>
+                                <option value="16">16</option>
+                                <option value="32">32</option>
+                                <option value="64">64</option>
+                             
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="export-table-wrapper table-responsive" id="majorGainersContainer" style="max-height: 395px;">   
+                            <table id="export-table" class="table table-bordered">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>Symbol</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Change</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="gainersTableBody">       
+                                </tbody>
+                            </table>
+                        </div> 
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card card-statistics" id="majorGainersContainer">
+                <div class="card-header">
+                    <div class="card-heading">
+                        <h4 class="card-title">Major Gainers Chart</h4>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <canvas #gainersChartCanvas id="gainersChartCanvas" style="margin-top: 20px;"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card card-statistics">
+            <div class="card-header d-flex justify-content-between">
+              <div class="card-heading">
+                <h4 class="card-title">Top Losers</h4>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="export-table-wrapper table-responsive" id="majorLosersContainer" style="max-height: 395px;">
+                <table id="export-table" class="table table-bordered">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Symbol</th>
+                      <th>Name</th>
+                      <th>Price</th>
+                      <th>Change</th>
+                    </tr>
+                  </thead>
+                  <tbody id="losersTableBody">
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card card-statistics" id="majorLosersContainer">
+                <div class="card-header">
+                    <div class="card-heading">
+                        <h4 class="card-title">Major Losers Chart</h4>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <canvas #losersChartCanvas id="losersChartCanvas" style="margin-top: 20px;"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</form>
+

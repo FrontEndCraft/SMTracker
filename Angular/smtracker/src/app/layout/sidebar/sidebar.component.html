@@ -1,0 +1,25 @@
+<aside class="app-navbar">
+    <!-- begin sidebar-nav -->
+    <div class="sidebar-nav scrollbar scroll_light">
+        <ul class="metismenu " id="sidebarNav">
+            &nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;
+            <li [ngClass]="{'active' : url === '/dashboard'}">
+                 <a href="/dashboard">Overview</a> 
+            </li>
+            <li [ngClass]="{'active' : url === '/stock'}">
+                 <a href="/stock">Stocks List</a> 
+            </li>
+            <li [ngClass]="{'active' : url === '/convertor'}">
+                 <a href="/convertor">Currency Converter</a> 
+            </li>
+            &nbsp;&nbsp;&nbsp;
+            <li class="sidebar-banner p-4 bg-gradient text-center m-3 d-block rounded">
+                <h5 class="text-white mb-1">SM Trackr</h5>
+                <p class="font-13 text-white line-20">Stock Tracker and Currency Converter Dashboard</p>
+                <a class="btn btn-square btn-inverse-light btn-xs d-inline-block mt-2 mb-0" href="#"> Tracking Partner</a>
+            </li>  
+        </ul>
+    </div>
+    <!-- end sidebar-nav -->
+</aside>

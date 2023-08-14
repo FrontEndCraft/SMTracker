@@ -1,0 +1,206 @@
+  <form class="form-horizontal" [formGroup]="convertorForm" novalidate>
+      <!-- begin row -->
+      <div class="row" *ngIf="isShowHeader">
+        <div class="col-md-12 m-b-30">
+          <!-- begin page title -->
+          <div class="d-block d-sm-flex flex-nowrap align-items-center">
+            <div class="page-title mb-2 mb-sm-0">
+              <h1>Currency Converter Dashboard</h1>
+            </div>
+          </div>
+          <!-- end page title -->
+        </div>
+      </div>
+      <!-- end row -->
+      <!-- start Crypto Currency contant -->
+      <div class="row crypto-currency" *ngIf="isShowHeader">
+        <div class="col-12">
+          <div class="card card-statistics p-0 owl-wrapper">
+            <div class="row align-items-center no-gutters">
+              <div class="col-xs-12 text-center text-xxl-left bg-primary px-3 py-3" style="text-align: center;">
+                <span class="text-white">Exchange Rate Monitor and Currency Converter Dashboard</span>
+                <span class="badge badge-light-inverse ml-xxl-4">USD Pair</span>
+              </div>
+              <div class="col-xs-1 py-3 py-xs-0">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card card-statistics">
+            <div class="card-header">
+              <div class="card-heading">
+                <h4 class="card-title" style="text-align: center;">Currency Converter</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="card card-statistics mail-contant">
+                  <div class="card-body p-0">
+                    <div class="row no-gutters">
+                      <div class="col-md-3 col-xxl-2 col-md-3">
+                        <div class="mail-sidebar">
+                          <div class="row justify-content-center">
+                            <div class="col-12">
+                              <div class="text-center mail-sidebar-title px-4">
+                                Source Currency<i class="fa fa-money pl-2"></i>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="px-4 py-4">
+                                <!--<div class="card card-statistics h-100 mb-0 o-hidden">
+                                  <div class="card-header d-flex justify-content-between">-->
+                                    <div class="dropdown">
+                                      <select id="sourceCurrency" formControlName="sourceCurrency" (change)="onChangeSourceCurrency()" class="form-control"></select>
+                                    </div>
+                                  <!--</div>
+                                </div>-->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-xxl-2 col-md-3">
+                        <div class="mail-sidebar">
+                          <div class="row justify-content-center">
+                            <div class="col-12">
+                              <div class="text-center mail-sidebar-title px-4">
+                                Amount <i class="fa fa-money pl-2"></i>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="px-4 py-4">
+                                  <div class="form-group">
+                                    <input type="Number" class="form-control" id="amount" min="0" step="0.01" placeholder="Enter Amount" formControlName="amount">
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-xxl-2 col-md-3">
+                        <div class="mail-sidebar">
+                          <div class="row justify-content-center">
+                            <div class="col-12">
+                              <div class="text-center mail-sidebar-title px-4">
+                                Target Currency <i class="fa fa-money pl-2"></i>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="px-4 py-4">
+                                <!--<div class="card card-statistics h-100 mb-0 o-hidden">
+                                  <div class="card-header d-flex justify-content-between">-->
+                                    <div class="dropdown">
+                                      <select id="destinationCurrency" formControlName="destinationCurrency" (change)="onChangeDestinationCurrency()" class="form-control"></select>
+                                    </div>
+                                  <!--</div>
+                                </div>-->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-xxl-2 col-md-3">
+                        <div class="mail-sidebar">
+                          <div class="row justify-content-center">
+                            <div class="col-12">
+                              <div class="px-4 py-4" style="text-align: center; margin-top: 30px;">
+                                <button (click)="convertCurrency()" class="btn btn-primary">Convert</button>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-xxl-2 col-md-3">
+                        <div class="mail-sidebar">
+                          <div class="row justify-content-center">
+                            <div class="col-12">
+                              <div class="text-center mail-sidebar-title px-4">
+                                Amount<i class="fa fa-money pl-2"></i>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="px-4 py-4">
+                                <div class="card card-statistics h-100 m-b-0">
+                                  <div class="card-header bg-gradient">
+                                    <div class="row align-items-center" style="justify-content:center;">
+                                      <p id="convertedAmount" style="color: white;">{{convertedAmount}}</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xxl-4 m-b-30">
+          <div class="card card-statistics h-100 mb-0">
+            <div class="card-header d-flex align-items-center justify-content-between">
+              <div class="card-heading">
+                <h4 class="card-title">Live USD Currency Pairs Table</h4>
+              </div>
+            </div>
+            <div class="card-body scrollbar scroll_dark pt-0">
+              <div class="datatable-wrapper table-responsive" style="max-height: 450px;margin-top:10px">
+                <table id="export-table" class="table table-bordered">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Currency Pair</th>
+                      <th>Exchange Rate</th>
+                    </tr>
+                  </thead>
+                  <tbody id="exchangeRateTable">
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th>#</th>
+                      <th>Currency Pair</th>
+                      <th>Exchange Rate</th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-8 m-b-30">
+          <div class="card card-statistics h-100 mb-0">
+            <div class="card-header">
+              <div class="card-heading">
+                <h4 class="card-title">USD Currency Pairs Exchange Rates</h4>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-6">
+                  <label for="currencyPairSelect">Select up to 15 Currency Pairs: </label>
+                  <select id="currencyPairSelect" multiple style="width: 300px;" class="form-control">
+                    <!-- Add options dynamically through JavaScript -->
+                  </select>
+                </div>
+                <div class="col-6" style="margin-bottom:0">
+                  <button (click)="updateChart()" class="btn btn-primary">Update Chart</button>
+                </div>
+              </div>
+              <div class="row" style="width: 100%; margin-top: 20px">
+                <canvas #exchangeRateChartCanvas id="exchangeRateChartCanvas" width="600" height="300"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+

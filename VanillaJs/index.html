@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Stock & Exchange - Your Tracking Partner </title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="description" content="Admin template that can be used to build dashboards for CRM, CMS, etc." />
+        <meta name="author" content="Potenza Global Solutions" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- app favicon -->
+        <link rel="shortcut icon" href="assets/img/favicon.png">
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+        <!-- plugin stylesheets -->
+        <link rel="stylesheet" type="text/css" href="assets/css/vendors.css" />
+        <!-- app style -->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    </head>
+    <body>
+        <!-- begin app -->
+        <div class="app">
+            <!-- begin app-wrap -->
+            <div class="app-wrap">
+                <!-- begin app-header -->
+                <header class="app-header top-bar">
+                    <!-- begin navbar -->
+                    <nav class="navbar navbar-expand-md">
+                        <!-- begin navbar-header -->
+                        <div class="navbar-header d-flex align-items-center">
+                            <a href="javascript:void:(0)" class="mobile-toggle"><i class="ti ti-align-right"></i></a>
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/img/logo.png" class="img-fluid logo-desktop" alt="logo" />
+                                <img src="assets/img/logo-icon.png" class="img-fluid logo-mobile" alt="logo" />
+                            </a>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="ti ti-align-left"></i>
+                        </button>
+                        <!-- end navbar-header -->
+
+                        <!-- begin navigation -->
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <div class="navigation d-flex">
+                                <ul class="navbar-nav nav-left">
+                                    <li class="nav-item">
+                                        <a href="javascript:void(0)" class="nav-link sidebar-toggle">
+                                            <i class="ti ti-align-right"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item full-screen d-none d-lg-block" id="btnFullscreen">
+                                        <a href="javascript:void(0)" class="nav-link expand">
+                                            <i class="icon-size-fullscreen"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="navbar-nav nav-right ml-auto">
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end navigation -->
+                    </nav>
+                    <!-- end navbar -->
+                </header>
+                <!-- end app-header -->
+
+                <!-- begin app-container -->
+                <div class="app-container">
+                    <!-- begin app-nabar -->
+                    <aside class="app-navbar">
+                        <!-- begin sidebar-nav -->
+                        <div class="sidebar-nav scrollbar scroll_light">
+                            <ul class="metismenu " id="sidebarNav">
+                                &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;
+                                <li class="active">
+                                     <a href='index.html'>Overview</a> 
+                                </li>
+                                <li class="">
+                                     <a href='stock.html'>Stocks List</a> 
+                                </li>
+                                <li class="">
+                                     <a href='converter.html'>Currency Converter</a> 
+                                </li>
+                                &nbsp;&nbsp;&nbsp;
+                                <li class="sidebar-banner p-4 bg-gradient text-center m-3 d-block rounded">
+                                    <h5 class="text-white mb-1">SM Trackr</h5>
+                                    <p class="font-13 text-white line-20">Stock Tracker and Currency Converter Dashboard</p>
+                                    <a class="btn btn-square btn-inverse-light btn-xs d-inline-block mt-2 mb-0" href="#"> Tracking Partner</a>
+                                </li>  
+                            </ul>
+                        </div>
+                        <!-- end sidebar-nav -->
+                    </aside>
+                    <!-- end app-navbar -->
+                    <!-- begin app-main -->
+                    <div class="app-main" id="main">
+                        <!-- begin container-fluid -->
+                        <div class="container-fluid">
+                            <!-- begin row -->
+                            <div class="row">
+                                <div class="col-md-12 m-b-30">
+                                    <!-- begin page title -->
+                                    <div class="d-block d-sm-flex flex-nowrap align-items-center">
+                                        <div class="page-title mb-2 mb-sm-0">
+                                            <h1>Stock Tracker and Currency Converter Dashboard</h1>
+                                        </div>
+                                    </div>
+                                    <!-- end page title -->
+                                </div>
+                            </div>
+                            <!-- end row -->
+                            <!-- start Crypto Currency contant -->
+                            <div class="row crypto-currency">
+                                <div class="col-12">
+                                    <div class="card card-statistics p-0 owl-wrapper">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col-xs-11 text-center text-xxl-left bg-primary px-3 py-3" style="text-align: center;">
+                                                <span class="text-white">Stock Tracker and Currency Converter Dashboard</span>
+                                                <span class="badge badge-light-inverse ml-xxl-4">USD Pair</span>
+                                            </div>
+                                            <div class="col-xs-10 py-3 py-xs-0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-xxl-8 mb-30">
+                                    <div class="card card-statistics h-100 mb-0 o-hidden">
+                                        <div class="card-header d-flex justify-content-between">
+                                            <div class="card-heading">
+                                                <h4 class="card-title">Stock Overview - Select Stock to Track</h4>
+                                            </div>
+                                            <div class="dropdown">
+                                                <select class="custom-select custom-select-sm" id="stockSymbol">
+                                                    <option value="AAPL">Apple Inc.</option>
+                                                    <option value="MSFT">Microsoft Corporation</option>
+                                                    <option value="AMZN">Amazon.com Inc.</option>
+                                                    <option value="GOOGL">Alphabet Inc. (Google)</option>
+                                                    <option value="FB">Facebook, Inc.</option>
+                                                    <option value="TSLA">Tesla, Inc.</option>
+                                                    <option value="BRK.A">Berkshire Hathaway Inc.</option>
+                                                    <option value="JNJ">Johnson & Johnson</option>
+                                                    <option value="JPM">JPMorgan Chase & Co.</option>
+                                                    <option value="V">Visa Inc.</option>
+                                                    <option value="WMT">Walmart Inc.</option>
+                                                    <option value="PG">Procter & Gamble Company</option>
+                                                    <option value="UNH">UnitedHealth Group Incorporated</option>
+                                                    <option value="MA">Mastercard Incorporated</option>
+                                                    <option value="VZ">Verizon Communications Inc.</option>
+                                                    <option value="INTC">Intel Corporation</option>
+                                                    <option value="ADBE">Adobe Inc.</option>
+                                                    <option value="PYPL">PayPal Holdings, Inc.</option>
+                                                    <option value="BAC">Bank of America Corporation</option>
+                                                    <option value="CSCO">Cisco Systems, Inc.</option>
+                                                    <option value="NFLX">Netflix, Inc.</option>
+                                                    <option value="CRM">Salesforce.com, Inc.</option>
+                                                    <option value="KO">Coca-Cola Company</option>
+                                                    <option value="PFE">Pfizer Inc.</option>
+                                                    <option value="T">AT&T Inc.</option>
+                                                    <option value="NVDA">NVIDIA Corporation</option>
+                                                    <option value="HD">Home Depot, Inc.</option>
+                                                    <option value="PG">Procter & Gamble Company</option>
+                                                    <option value="UNH">UnitedHealth Group Incorporated</option>
+                                                    <option value="MA">Mastercard Incorporated</option>
+                                                    <option value="VZ">Verizon Communications Inc.</option>
+                                                    <option value="INTC">Intel Corporation</option>
+                                                    <option value="PEP">PepsiCo, Inc.</option>
+                                                    <option value="DIS">Walt Disney Company (The)</option>
+                                                    <option value="ABT">Abbott Laboratories</option>
+                                                    <option value="MRK">Merck & Co., Inc.</option>
+                                                    <option value="ABBV">AbbVie Inc.</option>
+                                                    <option value="AVGO">Broadcom Inc.</option>
+                                                    <option value="MDT">Medtronic plc</option>
+                                                    <option value="MCD">McDonald\'s Corporation</option>
+                                                    <option value="CAT">Caterpillar Inc.</option>
+                                                    <option value="MMM">3M Company</option>
+                                                    <option value="SBUX">Starbucks Corporation</option>
+                                                    <option value="HON">Honeywell International Inc.</option>
+                                                    <option value="COST">Costco Wholesale Corporation</option>
+                                                    <option value="AMGN">Amgen Inc.</option>
+                                                    <option value="CME">CME Group Inc.</option>
+                                                    <option value="IBM">IBM</option>
+                                                    <option value="ACN">Accenture plc</option>
+                                                    <option value="TXN">Texas Instruments Incorporated</option>
+                                                    <option value="TMO">Thermo Fisher Scientific Inc.</option>
+                                                    <option value="NKE">Nike, Inc.</option>
+                                                    <option value="GS">Goldman Sachs Group, Inc. (The)</option>
+                                                    <option value="AXP">American Express Company</option>
+                                                    <option value="NEE">NextEra Energy, Inc.</option>
+                                                    <option value="CMCSA">Comcast Corporation</option>
+                                                    <option value="QCOM">QUALCOMM Incorporated</option>
+                                                    <option value="CHTR">Charter Communications, Inc.</option>
+                                                    <option value="DHR">Danaher Corporation</option>
+                                                    <option value="UNP">Union Pacific Corporation</option>
+                                                    <option value="BIIB">Biogen Inc.</option>
+                                                    <option value="CL">Colgate-Palmolive Company</option>
+                                                    <option value="SPGI">S&P Global Inc.</option>
+                                                    <option value="LMT">Lockheed Martin Corporation</option>
+                                                    <option value="TMUS">T-Mobile US, Inc.</option>
+                                                    <option value="LOW">Lowe's Companies, Inc.</option>
+                                                    <option value="APH">Amphenol Corporation</option>
+                                                    <option value="GE">General Electric Company</option>
+                                                    <option value="GILD">Gilead Sciences, Inc.</option>
+                                                    <option value="BKNG">Booking Holdings Inc.</option>
+                                                    <option value="RTX">Raytheon Technologies Corporation</option>
+                                                    <option value="ADP">Automatic Data Processing, Inc.</option>
+                                                    <option value="BMY">Bristol-Myers Squibb Company</option>
+                                                    <option value="GM">General Motors Company</option>
+                                                    <option value="LLY">Eli Lilly and Company</option>
+                                                    <option value="DD">DuPont de Nemours, Inc.</option>
+                                                    <option value="TGT">Target Corporation</option>
+                                                    <option value="ANTM">Anthem, Inc.</option>
+                                                    <option value="AIG">American International Group, Inc.</option>
+                                                    <option value="UTX">United Technologies Corporation</option>
+                                                    <option value="F">Ford Motor Company</option>
+                                                    <option value="DE">Deere & Company</option>
+                                                    <option value="DOW">Dow Inc.</option>
+                                                    <option value="COP">ConocoPhillips</option>
+                                                    <option value="CI">Cigna Corporation</option>
+                                                    <option value="SYY">Sysco Corporation</option>
+                                                    <option value="MDLZ">Mondelez International, Inc.</option>
+                                                    <option value="MAR">Marriott International, Inc.</option>
+                                                    <option value="UPS">United Parcel Service, Inc.</option>
+                                                    <option value="DUK">Duke Energy Corporation</option>
+                                                    <option value="ABT">Abbott Laboratories</option>
+                                                    <option value="BHP">BHP Group</option>
+                                                    <!-- Add other stock options here -->
+                                                </select>
+                                                &nbsp;
+                                                <select class="custom-select custom-select-sm" id="timeDetail">     
+                                                    <option value="TIME_SERIES_DAILY">Weekly Chart</option>
+                                                    <option value="TIME_SERIES_WEEKLY_ADJUSTED">Monthly Chart</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="card card-statistics">
+                                        <div class="card-header">
+                                            <div class="card-heading">
+                                                <h4 class="card-title">Stock Chart</h4>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="chart-container" id="stockChart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="card card-statistics">
+                                        <div class="card-header d-flex justify-content-between">
+                                            <div class="card-heading">
+                                                <h4 class="card-title">Top Gainers</h4>
+                                            </div>
+                                            <div class="dropdown">
+                                                <select class="custom-select custom-select-sm" id="selectGainersLosers">
+                                                    <option value="Choose Number" >Choose Number</option>
+                                                    <option value="2">2</option>
+                                                    <option value="4" selected>4</option>
+                                                    <option value="8">8</option>
+                                                    <option value="16">16</option>
+                                                    <option value="32">32</option>
+                                                    <option value="64">64</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="export-table-wrapper table-responsive" id="majorGainersContainer">   
+                                                <table id="export-table" class="table table-bordered">
+                                                    <thead class="thead-light">
+                                                        <tr>
+                                                            <th>Symbol</th>
+                                                            <th>Name</th>
+                                                            <th>Price</th>
+                                                            <th>Change</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="gainersTableBody">       
+                                                    </tbody>
+                                                </table>
+                                            </div> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card card-statistics" id="majorGainersContainer">
+                                    <div class="card-header">
+                                        <div class="card-heading">
+                                            <h4 class="card-title">Major Gainers Chart</h4>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="gainersChart" style="margin-top: 20px;"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card card-statistics">
+                                    <div class="card-body">
+                                        <div class="export-table-wrapper table-responsive" id="majorLosersContainer">
+                                            <div class="export-buttons m-b-20">
+                                                <h3> Top Losers </h3>
+                                            </div>
+                                            <table id="export-table" class="table table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th>Symbol</th>
+                                                        <th>Name</th>
+                                                        <th>Price</th>
+                                                        <th>Change</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="losersTableBody">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card card-statistics" id="majorLosersContainer">
+                                    <div class="card-header">
+                                        <div class="card-heading">
+                                            <h4 class="card-title">Major Losers Chart</h4>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="losersChart" style="margin-top: 20px;"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card card-statistics">
+                                    <div class="card-header">
+                                        <div class="card-heading">
+                                            <h4 class="card-title" style="text-align: center;">Currency Converter</h4>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="card card-statistics mail-contant">
+                                                <div class="card-body p-0">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-md-3 col-xxl-2 col-md-3">
+                                                            <div class="mail-sidebar">
+                                                                <div class="row justify-content-center">
+                                                                    <div class="col-12">
+                                                                        <div class="text-center mail-sidebar-title px-4">
+                                                                            Source Currency<i class="fa fa-money pl-2"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <div class="px-4 py-4">
+                                                                            <div class="card card-statistics h-100 mb-0 o-hidden">
+                                                                                <div class="card-header d-flex justify-content-between">
+                                                                                    <div class="dropdown">
+                                                                                        <select id="sourceCurrency"></select>   
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3 col-xxl-2 col-md-3">
+                                                            <div class="mail-sidebar">
+                                                                <div class="row justify-content-center">
+                                                                    <div class="col-12">
+                                                                        <div class="text-center mail-sidebar-title px-4">
+                                                                            Amount <i class="fa fa-money pl-2"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <div class="px-4 py-4">
+                                                                            <form>
+                                                                                <div class="form-group">
+                                                                                    <input type="Number" class="form-control" id="amount" min="0" step="0.01" placeholder="Enter Amount">
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3 col-xxl-2 col-md-3">
+                                                            <div class="mail-sidebar">
+                                                                <div class="row justify-content-center">
+                                                                    <div class="col-12">
+                                                                        <div class="text-center mail-sidebar-title px-4">
+                                                                            Target Currency <i class="fa fa-money pl-2"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <div class="px-4 py-4">
+                                                                            <div class="card card-statistics h-100 mb-0 o-hidden">
+                                                                                <div class="card-header d-flex justify-content-between">
+                                                                                    <div class="dropdown">
+                                                                                        <select id="destinationCurrency"></select>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3 col-xxl-2 col-md-3">
+                                                            <div class="mail-sidebar">
+                                                                <div class="row justify-content-center">
+                                                                    <div class="col-12">
+                                                                        <div class="px-4 py-4" style="text-align: center; margin-top: 30px;">
+                                                                            <button onclick="convertCurrency()" class="btn btn-primary">Convert</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3 col-xxl-2 col-md-3">
+                                                            <div class="mail-sidebar">
+                                                                <div class="row justify-content-center">
+                                                                    <div class="col-12">
+                                                                        <div class="text-center mail-sidebar-title px-4">
+                                                                             Amount<i class="fa fa-money pl-2"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <div class="px-4 py-4">
+                                                                            <div class="card card-statistics h-100 m-b-0">
+                                                                                <div class="card-header bg-gradient">
+                                                                                        <div class="row align-items-center" style="justify-content:center;">
+                                                                                        <p id="convertedAmount" style="color: white;"></p>
+                                                                                    </div>
+                                                                                </div> 
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xxl-4 m-b-30">
+                                <div class="card card-statistics h-100 mb-0">
+                                    <div class="card-header d-flex align-items-center justify-content-between">
+                                        <div class="card-heading">
+                                            <h4 class="card-title">Live USD Currency Pairs Table</h4>
+                                        </div>
+                                    </div>
+                                    <div class="card-body scrollbar scroll_dark pt-0" style="max-height: 350px;">
+                                        <div class="datatable-wrapper table-responsive">
+                                            <table id="export-table" class="table table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th>Currency Pair</th>
+                                                        <th>Exchange Rate</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="exchangeRateTable">
+                                                    
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Currency Pair</th>
+                                                        <th>Exchange Rate</th>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-8 m-b-30">
+                                <div class="card card-statistics">
+                                    <div class="card-header">
+                                        <div class="card-heading">
+                                            <h4 class="card-title">USD Currency Pairs Exchange Rates</h4>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div>
+                                            <label for="currencyPairSelect">Select up to 15 Currency Pairs: </label>
+                                            <select id="currencyPairSelect" multiple style="width: 300px;">
+                                              <!-- Add options dynamically through JavaScript -->
+                                            </select>
+                                            <button onclick="updateChart()">Update Chart</button>
+                                        </div>
+                                        <div style="width: 600px;">
+                                            <canvas id="exchangeRateChart" width="600" height="300"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- start Sweet alert -->
+                        <div class="row sweet-wrapper">
+                            <div class="col-md-6 mb-30">
+                                <div class="card card-statistics mb-30">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Auto Close Timer</h5>
+                                        <button id="sweetalert-12" class="btn btn-primary" aria-label="Try me! Example: A message with auto close timer">Try me!</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-30">
+                                <div class="card card-statistics">
+                                    <div class="card-body">
+                                        <h5 class="card-title"> Public IP Request </h5>
+                                        <button id="sweetalert-16" class="btn btn-primary" aria-label="Try me! Example: Dynamic queue">Fetch IP</button>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <!-- end Sweet alert -->
+                        
+                        <!-- end Crypto Currency contant -->
+                    </div>
+                    <!-- end container-fluid -->
+                </div>
+                <!-- end app-main -->
+            </div>
+            <!-- end app-container -->
+            <!-- begin footer -->
+            <footer class="footer">
+                <div class="row">
+                    <div class="col  col-sm-6 ml-sm-auto text-center text-sm-right">
+                        <p>&copy; 2023. All rights reserved.</p>
+                    </div> 
+                </div>
+            </footer>
+            <!-- end footer -->
+        </div>
+        <!-- end app -->
+
+        <!-- plugins -->
+        <script src="assets/js/vendors.js"></script>
+        <!-- custom app -->
+        <script src="assets/js/app.js"></script> 
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+        <script>
+            // Global variables for API key and base currency
+            const apiKey = '5d8b9157d1c096dd9eb5449d';
+            const baseCurrency = 'USD';
+            let chart;
+
+            // Function to fetch the currency rates
+            async function fetchCurrencyRates() {
+              const apiUrl = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${baseCurrency}`;
+              try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                if (data.result === 'success') {
+                  return data.conversion_rates;
+                } else {
+                  console.error('API Error:', data['error-type']);
+                }
+              } catch (error) {
+                console.error('Fetch Error:', error);
+              }
+            }
+
+            // Function to initialize the currency dropdowns
+            async function initCurrencyDropdowns(currencyRates) {
+              const currencyCodes = Object.keys(currencyRates);
+              const sourceCurrencySelect = document.getElementById('sourceCurrency');
+              const destinationCurrencySelect = document.getElementById('destinationCurrency');
+              for (const currencyCode of currencyCodes) {
+                const option = document.createElement('option');
+                option.value = currencyCode;
+                option.textContent = currencyCode.toUpperCase();
+                sourceCurrencySelect.appendChild(option);
+                destinationCurrencySelect.appendChild(option.cloneNode(true));
+              }
+
+              // Fill the dropdown menu with currency options for the chart
+              const currencyPairSelect = document.getElementById('currencyPairSelect');
+              for (const currency of currencyCodes) {
+                const option = document.createElement('option');
+                option.value = currency;
+                option.textContent = currency.toUpperCase();
+                currencyPairSelect.appendChild(option);
+              }
+
+              // Get the default selected currency pairs for the chart
+              const defaultSelectedCurrencies = ['eur', 'gbp', 'jpy', 'aud', 'cad', 'chf', 'cny', 'sek', 'nzd', 'mxn', 'sgd', 'hkd', 'nok', 'krw', 'try'];
+              currencyPairSelect.value = defaultSelectedCurrencies;
+
+              // Update the chart on DOM load
+              updateChart();
+            }
+
+            // Function to convert currency
+            function convertCurrency() {
+              const sourceCurrency = document.getElementById('sourceCurrency').value;
+              const destinationCurrency = document.getElementById('destinationCurrency').value;
+              const amount = parseFloat(document.getElementById('amount').value);
+
+              if (!isNaN(amount)) {
+                fetchCurrencyRates().then(currencyRates => {
+                  if (sourceCurrency === baseCurrency) {
+                    const convertedAmount = amount * currencyRates[destinationCurrency];
+                    document.getElementById('convertedAmount').textContent = `${amount} ${sourceCurrency.toUpperCase()} = ${convertedAmount.toFixed(2)} ${destinationCurrency.toUpperCase()}`;
+                  } else if (destinationCurrency === baseCurrency) {
+                    const convertedAmount = amount / currencyRates[sourceCurrency];
+                    document.getElementById('convertedAmount').textContent = `${amount} ${sourceCurrency.toUpperCase()} = ${convertedAmount.toFixed(2)} ${destinationCurrency.toUpperCase()}`;
+                  } else {
+                    const convertedAmount = (amount / currencyRates[sourceCurrency]) * currencyRates[destinationCurrency];
+                    document.getElementById('convertedAmount').textContent = `${amount} ${sourceCurrency.toUpperCase()} = ${convertedAmount.toFixed(2)} ${destinationCurrency.toUpperCase()}`;
+                  }
+                });
+              } else {
+                alert('Please enter a valid amount.');
+              }
+            }
+
+            // Function to generate random colors for the bars
+            function generateRandomColors(count) {
+              const colors = [];
+              for (let i = 0; i < count; i++) {
+                const color = `rgba(${getRandomNumber(0, 255)}, ${getRandomNumber(0, 255)}, ${getRandomNumber(0, 255)}, 0.7)`;
+                colors.push(color);
+              }
+              return colors;
+            }
+
+            // Function to get a random number within a range
+            function getRandomNumber(min, max) {
+              return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            // Function to update the chart with selected currencies
+            function updateChart() {
+              const selectedCurrencies = Array.from(document.getElementById('currencyPairSelect').selectedOptions, option => option.value);
+              fetchCurrencyRates().then(currencyRates => {
+                // Get the selected currency pairs and their exchange rates
+                const labels = selectedCurrencies.map(currency => currency.toUpperCase());
+                const exchangeRates = selectedCurrencies.map(currency => currencyRates[currency]);
+
+                // Create the chart or update the existing one
+                const ctx = document.getElementById('exchangeRateChart').getContext('2d');
+                if (chart) {
+                  chart.data.labels = labels;
+                  chart.data.datasets[0].data = exchangeRates;
+                  chart.data.datasets[0].backgroundColor = generateRandomColors(selectedCurrencies.length);
+                  chart.update();
+                } else {
+                  const colors = generateRandomColors(labels.length);
+                  chart = new Chart(ctx, {
+                    type: 'bar', // Use a bar chart
+                    data: {
+                      labels: labels,
+                      datasets: [{
+                        label: 'Exchange Rates',
+                        data: exchangeRates,
+                        backgroundColor: colors,
+                        borderWidth: 1,
+                      }]
+                    },
+                    options: {
+                      responsive: true,
+                      maintainAspectRatio: false,
+                      scales: {
+                        y: {
+                          beginAtZero: true
+                        }
+                      },
+                      plugins: {
+                        legend: {
+                          display: false,
+                        }
+                      }
+                    }
+                  });
+                }
+              });
+            }
+
+            // Call the function to initialize the currency dropdowns and update the chart on DOM load
+            document.addEventListener('DOMContentLoaded', () => {
+              fetchCurrencyRates().then(currencyRates => {
+                initCurrencyDropdowns(currencyRates);
+              });
+            });
+        </script>
+
+        <script>
+            // Function to fetch and update the table
+            async function updateTable() {
+              const apiKey = '5d8b9157d1c096dd9eb5449d';
+              const baseCurrency = 'USD';
+              const apiUrl = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${baseCurrency}`;
+
+              try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                if (data.result === 'success') {
+                  const rates = data.conversion_rates;
+                  const tableBody = document.getElementById('exchangeRateTable');
+
+                  // Clear existing table data
+                  tableBody.innerHTML = '';
+
+                  // Loop through all currency pairs and add rows to the table
+                  for (const currency in rates) {
+                    const exchangeRate = rates[currency];
+                    const row = document.createElement('tr');
+                    const currencyPairCell = document.createElement('td');
+                    const exchangeRateCell = document.createElement('td');
+
+                    currencyPairCell.textContent = `USD/${currency}`;
+                    exchangeRateCell.textContent = exchangeRate.toFixed(4);
+
+                    row.appendChild(currencyPairCell);
+                    row.appendChild(exchangeRateCell);
+                    tableBody.appendChild(row);
+                  }
+                } else {
+                  console.error('API Error:', data['error-type']);
+                }
+              } catch (error) {
+                console.error('Fetch Error:', error);
+              }
+            }
+
+            // Update the table every 100 seconds (adjust as needed)
+            setInterval(updateTable, 100000);
+            updateTable(); // Initial update
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const gainersTableBody = document.getElementById('gainersTableBody');
+                const losersTableBody = document.getElementById('losersTableBody');
+                const selectGainersLosers = document.getElementById('selectGainersLosers');
+                const gainersChartCanvas = document.getElementById('gainersChart');
+                const losersChartCanvas = document.getElementById('losersChart');
+                const gainersChartContext = gainersChartCanvas.getContext('2d');
+                const losersChartContext = losersChartCanvas.getContext('2d');
+                let gainersChart;
+                let losersChart;
+
+                // Function to fetch gainers data
+                async function fetchGainers(num) {
+                    try {
+                        const gainerAPI = 'be86972b1310bc955a9017b37c8bee78'; // Replace with your API key for gainers
+                        const gainerUrl = `https://financialmodelingprep.com/api/v3/stock_market/gainers?apikey=${gainerAPI}`;
+                        const response = await fetch(gainerUrl);
+                        const data = await response.json();
+                        return data.slice(0, num);
+                    } catch (error) {
+                        console.error('Error fetching gainers:', error);
+                        return [];
+                    }
+                }
+
+                // Function to fetch losers data
+                async function fetchLosers(num) {
+                    try {
+                        const loserAPI = 'be86972b1310bc955a9017b37c8bee78'; // Replace with your API key for losers
+                        const loserUrl = `https://financialmodelingprep.com/api/v3/stock_market/losers?apikey=${loserAPI}`;
+                        const response = await fetch(loserUrl);
+                        const data = await response.json();
+                        return data.slice(0, num);
+                    } catch (error) {
+                        console.error('Error fetching losers:', error);
+                        return [];
+                    }
+                }
+
+                // Function to render the gainers table
+                function renderGainersTable(gainers) {
+                    gainersTableBody.innerHTML = '';
+
+                    gainers.forEach(gainer => {
+                        const row = document.createElement('tr');
+                        const symbolCell = document.createElement('td');
+                        symbolCell.textContent = gainer.symbol;
+                        const nameCell = document.createElement('td');
+                        nameCell.textContent = gainer.name;
+                        const priceCell = document.createElement('td');
+                        priceCell.textContent = gainer.price;
+                        const changesPercentageCell = document.createElement('td');
+                        changesPercentageCell.textContent = gainer.changesPercentage;
+
+                        row.appendChild(symbolCell);
+                        row.appendChild(nameCell);
+                        row.appendChild(priceCell);
+                        row.appendChild(changesPercentageCell);
+
+                        gainersTableBody.appendChild(row);
+                    });
+                }
+
+                // Function to render the losers table
+                function renderLosersTable(losers) {
+                    losersTableBody.innerHTML = '';
+
+                    losers.forEach(loser => {
+                        const row = document.createElement('tr');
+                        const symbolCell = document.createElement('td');
+                        symbolCell.textContent = loser.symbol;
+                        const nameCell = document.createElement('td');
+                        nameCell.textContent = loser.name;
+                        const priceCell = document.createElement('td');
+                        priceCell.textContent = loser.price;
+                        const changesPercentageCell = document.createElement('td');
+                        changesPercentageCell.textContent = loser.changesPercentage;
+
+                        row.appendChild(symbolCell);
+                        row.appendChild(nameCell);
+                        row.appendChild(priceCell);
+                        row.appendChild(changesPercentageCell);
+
+                        losersTableBody.appendChild(row);
+                    });
+                }
+
+                // Function to create the gainers bar chart
+                function createGainersChart(labels, data) {
+                    if (gainersChart) {
+                        gainersChart.destroy();
+                    }
+
+                    const colors = data.map((_, index) => getRandomColor());
+
+                    gainersChart = new Chart(gainersChartContext, {
+                        type: 'bar',
+                        data: {
+                            labels: labels,
+                            datasets: [{
+                                label: 'Change Percentage',
+                                data: data,
+                                backgroundColor: colors,
+                                borderColor: colors,
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                }
+
+                // Function to create the losers bar chart
+                function createLosersChart(labels, data) {
+                    if (losersChart) {
+                        losersChart.destroy();
+                    }
+
+                    const colors = data.map((_, index) => getRandomColor());
+
+                    losersChart = new Chart(losersChartContext, {
+                        type: 'bar',
+                        data: {
+                            labels: labels,
+                            datasets: [{
+                                label: 'Change Percentage',
+                                data: data,
+                                backgroundColor: colors,
+                                borderColor: colors,
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                }
+
+                // Function to handle dropdown change
+                function handleDropdownChange() {
+                    const numToShow = parseInt(selectGainersLosers.value, 10);
+                    Promise.all([fetchGainers(numToShow), fetchLosers(numToShow)])
+                        .then(([gainersData, losersData]) => {
+                            renderGainersTable(gainersData);
+                            renderLosersTable(losersData);
+
+                            const gainersLabels = gainersData.map(gainer => gainer.symbol);
+                            const gainersChangesPercentage = gainersData.map(gainer => parseFloat(gainer.changesPercentage));
+                            createGainersChart(gainersLabels, gainersChangesPercentage);
+
+                            const losersLabels = losersData.map(loser => loser.symbol);
+                            const losersChangesPercentage = losersData.map(loser => parseFloat(loser.changesPercentage));
+                            createLosersChart(losersLabels, losersChangesPercentage);
+                        })
+                        .catch(error => {
+                            console.error('Error fetching data:', error);
+                        });
+                }
+
+                // Fetch and render gainers and losers table and charts with default value (10)
+                handleDropdownChange();
+
+                // Listen for changes in the dropdown
+                selectGainersLosers.addEventListener('change', handleDropdownChange);
+
+                // Function to generate random colors
+                function getRandomColor() {
+                    const letters = '0123456789ABCDEF';
+                    let color = '#';
+                    for (let i = 0; i < 6; i++) {
+                        color += letters[Math.floor(Math.random() * 16)];
+                    }
+                    return color;
+                }
+            });
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const stockSymbolSelect = document.getElementById('stockSymbol');
+                const timeDetailSelect = document.getElementById('timeDetail');
+                const stockChartContainer = document.getElementById('stockChart');
+
+                let stockChart;
+
+                stockSymbolSelect.addEventListener('change', fetchStock);
+                timeDetailSelect.addEventListener('change', fetchStock);
+
+                function fetchStock() {
+                    const API_KEY = 'DOSWKD9L3URZ6BUR'; // Replace with your actual API key
+                    const stockSymbol = stockSymbolSelect.value;
+                    const timeDetail = timeDetailSelect.value;
+                    const headerAP = headerAPIFromTimeDetail(timeDetail);
+                    const API_Call = `https://www.alphavantage.co/query?function=${timeDetail}&symbol=${stockSymbol}&apikey=${API_KEY}`;
+
+                    fetch(API_Call)
+                        .then(response => response.json())
+                        .then(data => {
+                            const stockChartXValuesFunction = [];
+                            const stockChartYValuesFunction = [];
+
+                            for (let key in data[headerAP]) {
+                                stockChartXValuesFunction.push(key);
+                                stockChartYValuesFunction.push(data[headerAP][key]['1. open']);
+                            }
+
+                            renderStockChart(stockChartXValuesFunction, stockChartYValuesFunction);
+                        })
+                        .catch(error => {
+                            console.error('Error fetching stock data:', error);
+                        });
+                }
+
+                function headerAPIFromTimeDetail(timeDetail) {
+                    if (timeDetail === 'TIME_SERIES_WEEKLY_ADJUSTED') {
+                        return 'Weekly Adjusted Time Series';
+                    } else if (timeDetail === 'TIME_SERIES_DAILY') {
+                        return 'Time Series (Daily)';
+                    } else {
+                        return 'Monthly Time Series';
+                    }
+                }
+
+                function renderStockChart(labels, data) {
+                    if (stockChart) {
+                        stockChartContainer.removeChild(stockChartContainer.firstChild);
+                    }
+
+                    stockChart = Plotly.newPlot(stockChartContainer, [{
+                        x: labels,
+                        y: data,
+                        type: 'scatter',
+                        mode: 'lines+markers',
+                        marker: { color: 'blue' },
+                    }], {
+                        width: '80%',
+                        height: 400,
+                        title: stockSymbolSelect.value,
+                        margin: {
+                            l: 40,
+                            r: 40,
+                            t: 40,
+                            b: 40,
+                        },
+                    });
+                }
+
+                // Fetch initial stock data
+                fetchStock();
+            });
+        </script>
+    </body>
+</html>
