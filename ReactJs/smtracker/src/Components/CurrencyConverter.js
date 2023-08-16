@@ -321,7 +321,7 @@ const CurrencyConverter = () => {
 
                                 <Multiselect
                                     options={options}
-                                    displayValue="value"
+                                    displayValue="key"
                                     onSelect={onSelect}
                                     onRemove={onRemove}
                                     selectedValues={selectedOptions}
